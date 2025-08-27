@@ -1,3 +1,6 @@
+// Motor Mayhem
+// Advanced Trainyard mission by FortyTwoFortyTwo
+
 #base robot_giant.pop
 #base robot_standard.pop
 #base robot_gatebot.pop
@@ -8,6 +11,7 @@ population
 	StartingCurrency	700
 	RespawnWaveTime	0
 	CanBotsAttackWhileInSpawnRoom	no
+	Advanced	1
 	
 	Mission
 	{
@@ -147,36 +151,24 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate C
+		WaveSpawn	// Gate C
 		{
-			WaitForAllDead	"w1_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_c
 			}
 		}
 		
-		WaveSpawn // Gate B
+		WaveSpawn	// Gate B
 		{
-			WaitForAllDead	"w1_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_b
@@ -419,54 +411,36 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate C
+		WaveSpawn	// Gate C
 		{
-			WaitForAllDead	"w2_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 0
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_c
 			}
 		}
 		
-		WaveSpawn // Gate A
+		WaveSpawn	// Gate A
 		{
-			WaitForAllDead	"w2_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 0
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_a
 			}
 		}
 		
-		WaveSpawn // Gate B
+		WaveSpawn	// Gate B
 		{
-			WaitForAllDead	"w2_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_b
@@ -691,36 +665,24 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate C
+		WaveSpawn	// Gate C
 		{
-			WaitForAllDead	"w3_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_c
 			}
 		}
 		
-		WaveSpawn // Gate A
+		WaveSpawn	// Gate A
 		{
-			WaitForAllDead	"w3_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_a
@@ -836,7 +798,7 @@ population
 			
 			Tank
 			{
-				Health	25000
+				Health	23000
 				Name	Tank
 				Speed	75
 				StartingPathTrackNode	tank_path_RU_1
@@ -904,7 +866,7 @@ population
 			SpawnCount	5
 			Where	spawnbot_right
 			WaitBeforeStarting	10
-			WaitBetweenSpawns	15
+			WaitBetweenSpawns	12
 			RandomSpawn	1
 			
 			StartWaveOutput
@@ -989,54 +951,36 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate D
+		WaveSpawn	// Gate D
 		{
-			WaitForAllDead	"w4_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_d
 			}
 		}
 		
-		WaveSpawn // Gate C
+		WaveSpawn	// Gate C
 		{
-			WaitForAllDead	"w4_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_c
 			}
 		}
 		
-		WaveSpawn // Gate B
+		WaveSpawn	// Gate B
 		{
-			WaitForAllDead	"w4_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_b
@@ -1255,7 +1199,7 @@ population
 			Name	"w4_conch_backup_medic"
 			WaitForAllSpawned	"w4_champ_backup"
 			TotalCurrency	100
-			TotalCount	32
+			TotalCount	24
 			MaxActive	12
 			SpawnCount	2
 			Where	spawnbot
@@ -1309,7 +1253,7 @@ population
 			MaxActive	4
 			SpawnCount	4
 			Where	spawnbot_middle
-			WaitBeforeStarting	1
+			WaitBeforeStarting	6
 			WaitBetweenSpawns	0
 			
 			Squad
@@ -1371,7 +1315,7 @@ population
 			MaxActive	12
 			SpawnCount	3
 			Where	spawnbot
-			WaitBeforeStarting	1
+			WaitBeforeStarting	7
 			WaitBetweenSpawns	8
 			RandomSpawn	1
 			Support	1
@@ -1397,57 +1341,39 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate D
+		WaveSpawn	// Gate D
 		{
-			WaitForAllDead	"w5_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_d
 			}
 		}
 		
-		WaveSpawn // Gate B
+		WaveSpawn	// Gate B
 		{
-			WaitForAllDead	"w5_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_b
 			}
 		}
 		
-		WaveSpawn // Gate A
+		WaveSpawn	// Gate A
 		{
-			WaitForAllDead	"w5_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
-				ClassIcon	sign_a
+				ClassIcon	sign_A
 			}
 		}
 		
@@ -1592,7 +1518,7 @@ population
 
 			TFBot
 			{
-				Template	T_TFGateBot_Pyro_Hard_AlwaysCrit
+				Template	T_TFGateBot_Pyro_Hard_Crit
 			}
 		}
 		
@@ -1671,13 +1597,13 @@ population
 		WaveSpawn
 		{
 			Name	"w5_giantfury"
-			WaitForAllSpawned	"w5_huntsmanspammer"
+			WaitForAllDead	"w5_pyro_samurai"
 			TotalCurrency	50
 			TotalCount	3
 			MaxActive	3
 			SpawnCount	1
 			Where	gatebot
-			WaitBeforeStarting	10
+			WaitBeforeStarting	1
 			WaitBetweenSpawns	7
 			
 			StartWaveOutput
@@ -1696,7 +1622,7 @@ population
 		{
 			Name	"w5_pyro"
 			WaitForAllSpawned	"w5_huntsmanspammer"
-			TotalCurrency	50
+			TotalCurrency	75
 			TotalCount	18
 			MaxActive	15
 			SpawnCount	6
@@ -1725,7 +1651,7 @@ population
 			SpawnCount	1
 			Where	spawnbot_middle
 			WaitBeforeStarting	20
-			WaitBetweenSpawns	10
+			WaitBetweenSpawns	15
 			
 			TFBot
 			{
@@ -1791,54 +1717,36 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate A
+		WaveSpawn	// Gate A
 		{
-			WaitForAllDead	"w6_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_a
 			}
 		}
 		
-		WaveSpawn // Gate C
+		WaveSpawn	// Gate C
 		{
-			WaitForAllDead	"w6_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_c
 			}
 		}
 		
-		WaveSpawn // Gate B
+		WaveSpawn	// Gate B
 		{
-			WaitForAllDead	"w6_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_b
@@ -2114,12 +2022,12 @@ population
 			Name	"w6_heavyconch"
 			WaitForAllSpawned	"w6_steelfist"
 			TotalCurrency	100
-			TotalCount	24
-			MaxActive	16
+			TotalCount	20
+			MaxActive	14
 			SpawnCount	2
 			Where	spawnbot
 			WaitBeforeStarting	0
-			WaitBetweenSpawns	2
+			WaitBetweenSpawns	3
 			
 			RandomChoice
 			{
@@ -2156,7 +2064,7 @@ population
 			WaitForAllSpawned	"w6_heavyconch"
 			TotalCurrency	50
 			TotalCount	20
-			MaxActive	8
+			MaxActive	6
 			SpawnCount	1
 			Where	spawnbot
 			WaitBeforeStarting	5
@@ -2166,17 +2074,17 @@ population
 			TFBot
 			{
 				Class	Soldier
-				Skill	Hard
+				Skill	Expert
 			}
 		}
 		
 		WaveSpawn
 		{
-			Name	"w6_final"
+			Name	"w6_giantdemo"
 			WaitForAllDead	"w6_steelfist"
 			TotalCurrency	150
-			TotalCount	12
-			MaxActive	12
+			TotalCount	16
+			MaxActive	16
 			SpawnCount	4
 			Where	spawnbot_middle
 			WaitBeforeStarting	1
@@ -2197,6 +2105,12 @@ population
 				
 				TFBot
 				{
+					Template	T_TFBot_Giant_Medic_Regen
+					Tag	bot_giant
+				}
+				
+				TFBot
+				{
 					Template	T_TFGateBot_Soldier_Extended_Concheror_Normal_Crit
 				}
 				
@@ -2204,6 +2118,26 @@ population
 				{
 					Template	T_TFGateBot_Soldier_Extended_Concheror_Normal_Crit
 				}
+			}
+		}
+		
+		WaveSpawn
+		{
+			Name	"w6_soldier"
+			WaitForAllSpawned	"w6_giantdemo"
+			TotalCurrency	50
+			TotalCount	20
+			MaxActive	10
+			SpawnCount	1
+			Where	spawnbot
+			WaitBeforeStarting	1
+			WaitBetweenSpawns	1
+			Support	1
+			
+			TFBot
+			{
+				Class	Soldier
+				Skill	Expert
 			}
 		}
 	}

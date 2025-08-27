@@ -1,3 +1,6 @@
+// Boilerplate
+// A Normal Trainyard mission by FortyTwoFortyTwo
+
 #base robot_giant.pop
 #base robot_standard.pop
 #base robot_gatebot.pop
@@ -71,18 +74,12 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate C
+		WaveSpawn	// Gate C
 		{
-			WaitForAllDead	"w1_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_c
@@ -97,7 +94,7 @@ population
 			MaxActive 12
 			SpawnCount 4
 			Where spawnbot_middle
-			WaitBeforeStarting 0			
+			WaitBeforeStarting 0
 			WaitBetweenSpawns 8
 			RandomSpawn	1
 
@@ -106,7 +103,7 @@ population
 				Template T_TFBot_Scout_Melee
 			}
 		}
-		
+
 		WaveSpawn
 		{
 			Name	"w1_scout_2"
@@ -184,18 +181,12 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate B
+		WaveSpawn	// Gate B
 		{
-			WaitForAllDead	"w2_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_b
@@ -317,18 +308,12 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate D
+		WaveSpawn	// Gate D
 		{
-			WaitForAllDead	"w3_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_d
@@ -451,36 +436,24 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate B
+		WaveSpawn	// Gate B
 		{
-			WaitForAllDead	"w4_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_b
 			}
 		}
 		
-		WaveSpawn // Gate D
+		WaveSpawn	// Gate D
 		{
-			WaitForAllDead	"w4_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_d
@@ -638,36 +611,24 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate B
+		WaveSpawn	// Gate B
 		{
-			WaitForAllDead	"w5_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_b
 			}
 		}
 		
-		WaveSpawn // Gate C
+		WaveSpawn	// Gate C
 		{
-			WaitForAllDead	"w5_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_c
@@ -780,18 +741,12 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn // Gate D
+		WaveSpawn	// Gate D
 		{
-			WaitForAllDead	"w4_final"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
 				ClassIcon	sign_d

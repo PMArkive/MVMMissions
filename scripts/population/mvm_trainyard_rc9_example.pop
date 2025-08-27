@@ -81,20 +81,38 @@
 //	scout_sunstick
 //	scout_sunstick_giant
 //	scout_sunstick_armored
+//	soldier_crit_mangler
 //	soldier_incendiary
+//	soldier_blackbox_backup_armored
+//	soldier_bison
+//	soldier_conductor
 //	pyro_dragon_fury
 //	pyro_dragon_fury_spammer
+//	pyro_dragon_fury_conch
 //	pyro_flare_rain
+//	pyro_gaspasser_explode
+//	pyro_powerjack
 //	demo_loch
 //	demo_loosecannon
 //	demo_sticky
 //	demo_sticky_giant
+//	demo_sticky_spammer
+//	demo_sticky_arrow_spammer
+//	demo_skullcutter
+//	demo_paintrain_blast
+//	heavy_deflector_backup
+//	heavy_shotgun_burst
+//	heavy_champ_buff
+//	heavy_champ_conch
+//	heavy_champ_backup
 //	medic_kritz
 //	medic_kritz_giant
 //	medic_shield
 //	medic_bullet
 //	medic_blast
 //	medic_fire
+//	sniper_bow_giant
+//	sniper_bow_conch
 //	sniper_smg
 //	sniper_smg_giant
 //	spy_pyro
@@ -132,7 +150,6 @@
 #base robot_giant.pop
 #base robot_standard.pop
 #base robot_gatebot.pop
-#base robot_trainyard.pop		//custom robots template for mvm_trainyard
 
 population
 {
@@ -157,83 +174,54 @@ population
 		
 		WaveSpawn	//this WaveSpawn is purely for "A" sign in support robots hud, to hint the current wave have train A
 		{
-			WaitForAllDead	"w1_D"			//starts once all robots killed, so it would never spawns in map
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000		//alternately, dont let him spawn for a very long time
-			Support 1						//must be support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
-				Class Scout
-				ClassIcon	sign_a			//sets his custom icon to A sign
+				ClassIcon	sign_a			//sets custom icon to A sign
 			}
 		}
 		
-		WaveSpawn							//repeat same for train B
+		WaveSpawn	//repeat same for train B
 		{
-			WaitForAllDead	"w1_D"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
-				Class Scout
-				ClassIcon	sign_b			//sets his custom icon to B sign
+				ClassIcon	sign_b			//sets custom icon to B sign
 			}
 		}
 		
-		WaveSpawn							//repeat same for train C
+		WaveSpawn	//repeat same for train C
 		{
-			WaitForAllDead	"w1_D"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
-				Class Scout
-				ClassIcon	sign_c			//sets his custom icon to C sign
+				ClassIcon	sign_c			//sets custom icon to C sign
 			}
 		}
 		
-		WaveSpawn							//repeat same for train D
+		WaveSpawn	//repeat same for train D
 		{
-			WaitForAllDead	"w1_D"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
-				Class Scout
-				ClassIcon	sign_d			//sets his custom icon to D sign
+				ClassIcon	sign_d			//sets custom icon to D sign
 			}
 		}
 		
 		WaveSpawn							//this is an example gatebot to capture train
 		{
-			Name	"w1_D"					//to prevent all custom icon robots to spawn
 			TotalCurrency	0
 			TotalCount	10
 			MaxActive	1
@@ -359,21 +347,14 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn
+		WaveSpawn	// Gate A
 		{
-			WaitForAllDead	"w2_3"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
-				Class Scout
 				ClassIcon	sign_a
 			}
 		}
@@ -434,7 +415,7 @@ population
 			MaxActive	1
 			SpawnCount	1
 			Where	gatebot_middle
-			WaitBeforeStarting	10	//allow atleast 7 seconds after reseting first train to spawn second train (map refuses to fire relay if less than 7 seconds)
+			WaitBeforeStarting	10	//allow atleast 10 seconds after reseting first train to spawn second train (map refuses to fire relay if less than 10 seconds)
 			WaitBetweenSpawns	25	//allow atleast 22 seconds again after spawning second train to end the wave as map need to trigger again
 			
 			FirstSpawnOutput
@@ -577,21 +558,14 @@ population
 			Action	Trigger
 		}
 		
-		WaveSpawn
+		WaveSpawn	// Gate D
 		{
-			WaitForAllDead	"w4_all"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
-				Class Scout
 				ClassIcon	sign_d
 			}
 		}
@@ -751,22 +725,15 @@ population
 			Target	wave_finished_relay
 			Action	Trigger
 		}
-				
+		
 		WaveSpawn
 		{
-			WaitForAllDead	"w6"
-			TotalCurrency 0
-			Where spawnbot
-			TotalCount 1
-			MaxActive 1
-			SpawnCount 1
-			WaitBetweenSpawnsAfterDeath 0
-			WaitBeforeStarting 1000000
-			Support 1
-
+			Support		Limited
+			TotalCount	1
+			MaxActive	0
+			SpawnCount	0
 			TFBot
 			{
-				Class Scout
 				ClassIcon	sign_c
 			}
 		}
@@ -808,8 +775,50 @@ population
 			
 			TFBot
 			{
-				Template	T_TFGateBot_Scout_Melee_Right	//This robot template from robot_trainyard.pop have tag bot_right in both Default and RevertGateBotsBehavior
+				//This robot have tag bot_right in both Default and RevertGateBotsBehavior
 				//bot will ignore flank path and instead takes main path next to station
+
+				Class Scout
+
+				EventChangeAttributes
+				{
+					Default
+					{
+						Tag bot_right	//robot will take right/main path next to the station
+						
+						Tag bot_gatebot
+						Tag nav_prefer_gate1_flank
+						BehaviorModifiers push
+						Attributes IgnoreFlag
+
+						Item "MvM GateBot Light Scout"
+						Skill Normal
+						WeaponRestrictions MeleeOnly
+						ItemAttributes
+						{
+							ItemName "TF_WEAPON_SCATTERGUN"
+							"damage penalty" 0.5
+						}
+					}
+					RevertGateBotsBehavior
+					{
+						Tag bot_right	//robot will take right/main path next to the station
+						
+						Item "MvM GateBot Light Scout"
+						ItemAttributes
+						{
+							ItemName "MvM GateBot Light Scout"
+							"item style override" 1
+						}
+						ItemAttributes
+						{
+							ItemName "TF_WEAPON_SCATTERGUN"
+							"damage penalty" 0.5
+						}
+						Skill Normal
+						WeaponRestrictions MeleeOnly
+					}
+				}
 			}
 		}
 		
@@ -826,8 +835,50 @@ population
 			
 			TFBot
 			{
-				Template	T_TFGateBot_Scout_Melee_Left	//This robot template from robot_trainyard.pop have tag bot_left in both Default and RevertGateBotsBehavior
+				//This robot have tag bot_left in both Default and RevertGateBotsBehavior
 				//bot will ignore main path and instead takes flank above station
+
+				Class Scout
+
+				EventChangeAttributes
+				{
+					Default
+					{
+						Tag bot_left	//robot will take left/flank path ontop of the station
+						
+						Tag bot_gatebot
+						Tag nav_prefer_gate1_flank
+						BehaviorModifiers push
+						Attributes IgnoreFlag
+
+						Item "MvM GateBot Light Scout"
+						Skill Normal
+						WeaponRestrictions MeleeOnly
+						ItemAttributes
+						{
+							ItemName "TF_WEAPON_SCATTERGUN"
+							"damage penalty" 0.5
+						}
+					}
+					RevertGateBotsBehavior
+					{
+						Tag bot_left	//robot will take left/flank path ontop of the station
+						
+						Item "MvM GateBot Light Scout"
+						ItemAttributes
+						{
+							ItemName "MvM GateBot Light Scout"
+							"item style override" 1
+						}
+						ItemAttributes
+						{
+							ItemName "TF_WEAPON_SCATTERGUN"
+							"damage penalty" 0.5
+						}
+						Skill Normal
+						WeaponRestrictions MeleeOnly
+					}
+				}
 			}
 		}
 		
