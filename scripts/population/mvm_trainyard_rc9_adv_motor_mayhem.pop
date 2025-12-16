@@ -64,7 +64,7 @@ population
 	{
 		Objective Engineer
 
-		InitialCooldown 60
+		InitialCooldown 90
 		Where spawnbot_right
 		BeginAtWave 5
 		RunForThisManyWaves 1
@@ -90,7 +90,7 @@ population
 		BeginAtWave 5
 		RunForThisManyWaves 1
 		CooldownTime 10000
-		DesiredCount 4
+		DesiredCount 2
 
 		TFBot
 		{
@@ -301,9 +301,9 @@ population
 			Name	"w1_shotgun_soldier"
 			WaitForAllSpawned	"w1_giantdemoman_2"
 			TotalCurrency	100
-			TotalCount	35
-			MaxActive	15
-			SpawnCount	5
+			TotalCount	28
+			MaxActive	12
+			SpawnCount	4
 			Where	spawnbot
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	6
@@ -323,7 +323,7 @@ population
 			MaxActive	10
 			SpawnCount	6
 			Where	spawnbot_right
-			WaitBeforeStarting	20
+			WaitBeforeStarting	25
 			WaitBetweenSpawns	0
 			
 			TFBot
@@ -1118,7 +1118,7 @@ population
 		
 		WaveSpawn
 		{
-			Name	"w4_champ_backup"
+			Name	"w4_champ_backup_giantshotgun_medic"
 			WaitForAllSpawned	"w4_giantbaseballmedic"
 			TotalCurrency	100
 			TotalCount	24
@@ -1154,7 +1154,7 @@ population
 		
 		WaveSpawn
 		{
-			Name	"w4_giantshotgun_medic"
+			Name	"w4_champ_backup_giantshotgun_medic"
 			WaitForAllDead	"w4_conch"
 			TotalCurrency	100
 			TotalCount	8
@@ -1196,34 +1196,26 @@ population
 		
 		WaveSpawn
 		{
-			Name	"w4_conch_backup_medic"
-			WaitForAllSpawned	"w4_champ_backup"
+			Name	"w4_fury_backup_medic"
+			WaitForAllSpawned	"w4_champ_backup_giantshotgun_medic"
 			TotalCurrency	100
-			TotalCount	24
+			TotalCount	20
 			MaxActive	12
 			SpawnCount	2
 			Where	spawnbot
 			WaitBeforeStarting	0
 			WaitBetweenSpawns	6
 			
-			RandomChoice
+			TFBot
 			{
-				TFBot
-				{
-					Template	T_TFBot_Soldier_Extended_Concheror
-				}
-				
-				TFBot
-				{
-					Template	T_TFBot_Soldier_Extended_Battalion
-				}
+				Template	T_TFBot_Pyro_DragonFury
 			}
 		}
 		
 		WaveSpawn
 		{
 			Name	"w4_giantshotgun"
-			WaitForAllDead	"w4_giantshotgun_medic"
+			WaitForAllDead	"w4_champ_backup_giantshotgun_medic"
 			TotalCurrency	100
 			TotalCount	4
 			MaxActive	4
@@ -1246,14 +1238,14 @@ population
 		
 		WaveSpawn
 		{
-			Name	"w4_conch_backup_medic"
+			Name	"w4_fury_backup_medic"
 			WaitForAllSpawned	"w4_giantshotgun"
 			TotalCurrency	100
 			TotalCount	4
 			MaxActive	4
 			SpawnCount	4
 			Where	spawnbot_middle
-			WaitBeforeStarting	6
+			WaitBeforeStarting	3
 			WaitBetweenSpawns	0
 			
 			Squad
@@ -1305,18 +1297,17 @@ population
 			}
 		}
 
-		
 		WaveSpawn
 		{
 			Name	"w4_final"
-			WaitForAllSpawned	"w4_conch_backup_medic"
+			WaitForAllSpawned	"w4_fury_backup_medic"
 			TotalCurrency	50
 			TotalCount	20
-			MaxActive	12
+			MaxActive	10
 			SpawnCount	3
 			Where	spawnbot
 			WaitBeforeStarting	7
-			WaitBetweenSpawns	8
+			WaitBetweenSpawns	10
 			RandomSpawn	1
 			Support	1
 
@@ -1443,7 +1434,7 @@ population
 		{
 			Name	"w5_directhitshield"
 			TotalCurrency	100
-			TotalCount	24
+			TotalCount	20
 			MaxActive	16
 			SpawnCount	4
 			Where	spawnbot_right
@@ -1551,7 +1542,7 @@ population
 			SpawnCount	1
 			Where	gatebot
 			WaitBeforeStarting	1
-			WaitBetweenSpawns	7
+			WaitBetweenSpawns	12
 			
 			StartWaveOutput
 			{
@@ -1570,12 +1561,12 @@ population
 			Name	"w5_huntsmanspammer"
 			WaitForAllSpawned	"w5_pyro_samurai"
 			TotalCurrency	100
-			TotalCount	16
-			MaxActive	12
+			TotalCount	10
+			MaxActive	10
 			SpawnCount	2
 			Where	spawnbot
 			WaitBeforeStarting	5
-			WaitBetweenSpawns	4
+			WaitBetweenSpawns	8
 			
 			Squad
 			{
@@ -1687,12 +1678,12 @@ population
 			Name	"w5_final"
 			WaitForAllSpawned	"w5_pyro"
 			TotalCurrency	0
-			TotalCount	8
-			MaxActive	8
+			TotalCount	6
+			MaxActive	6
 			SpawnCount	2
 			Where	spawnbot_middle
 			WaitBeforeStarting	18
-			WaitBetweenSpawns	4
+			WaitBetweenSpawns	8
 			RandomSpawn	1
 			Support 1
 			
@@ -1786,7 +1777,6 @@ population
 			{
 				Template	T_TFBot_Giant_Scout_Fast
 				Tag	bot_giant
-				Tag	bot_left
 			}
 		}
 		
@@ -1864,7 +1854,7 @@ population
 			
 			Tank
 			{
-				Health	18000
+				Health	17500
 				Name	Tank
 				Speed	75
 				StartingPathTrackNode	tank_path_RL_1
@@ -1895,7 +1885,7 @@ population
 			
 			Tank
 			{
-				Health	18000
+				Health	17500
 				Name	Tank
 				Speed	75
 				StartingPathTrackNode	tank_path_LU_1
@@ -1921,12 +1911,12 @@ population
 			MaxActive	1
 			SpawnCount	1
 			Where	spawnbot
-			WaitBeforeStarting	55
+			WaitBeforeStarting	50
 			WaitBetweenSpawns	0
 			
 			Tank
 			{
-				Health	14000
+				Health	13000
 				Name	Tank
 				Speed	75
 				StartingPathTrackNode	tank_path_RU_1
@@ -1957,7 +1947,7 @@ population
 			
 			Tank
 			{
-				Health	14000
+				Health	13000
 				Name	Tank
 				Speed	75
 				Skin 1
@@ -1980,7 +1970,7 @@ population
 			Name	"w6_burstdemo"
 			WaitForAllSpawned	"w6_rocketpush"
 			TotalCurrency	100
-			TotalCount	48
+			TotalCount	36
 			MaxActive	14
 			SpawnCount	3
 			Where	spawnbot
@@ -1989,7 +1979,9 @@ population
 			
 			TFBot
 			{
-				Template	T_TFGateBot_Demo_Burst_Normal_Crit
+				Template	T_TFBot_Demo_Burst
+				Skill		Normal
+				Attributes	AlwaysCrit
 			}
 		}
 		
@@ -1998,7 +1990,7 @@ population
 			Name	"w6_steelfist"
 			WaitForAllSpawned	"w6_burstdemo"
 			TotalCurrency	100
-			TotalCount	20
+			TotalCount	15
 			MaxActive	15
 			SpawnCount	5
 			Where	spawnbot_right
@@ -2026,7 +2018,7 @@ population
 			MaxActive	14
 			SpawnCount	2
 			Where	spawnbot
-			WaitBeforeStarting	0
+			WaitBeforeStarting	8
 			WaitBetweenSpawns	3
 			
 			RandomChoice
@@ -2081,14 +2073,52 @@ population
 		WaveSpawn
 		{
 			Name	"w6_giantdemo"
-			WaitForAllDead	"w6_steelfist"
-			TotalCurrency	150
-			TotalCount	16
-			MaxActive	16
+			WaitForAllSpawned	"w6_steelfist"
+			TotalCurrency	100
+			TotalCount	12
+			MaxActive	12
 			SpawnCount	4
 			Where	spawnbot_middle
-			WaitBeforeStarting	1
-			WaitBetweenSpawns	10
+			WaitBeforeStarting	3
+			WaitBetweenSpawns	20
+			
+			Squad
+			{
+				TFBot
+				{
+					Template	T_TFBot_Giant_Demo_Burst
+					Tag	bot_giant
+					Attributes	AlwaysCrit
+				}
+				
+				TFBot
+				{
+					Template	T_TFBot_Giant_Medic_Regen
+					Tag	bot_giant
+				}
+				
+				TFBot
+				{
+					Template	T_TFGateBot_Soldier_Extended_Concheror_Normal_Crit
+				}
+				
+				TFBot
+				{
+					Template	T_TFGateBot_Soldier_Extended_Concheror_Normal_Crit
+				}
+			}
+		}
+		
+		WaveSpawn
+		{
+			WaitForAllSpawned	"w6_giantdemo"
+			TotalCurrency	50
+			TotalCount	4
+			MaxActive	4
+			SpawnCount	4
+			Where	spawnbot_middle
+			WaitBeforeStarting	10
+			WaitBetweenSpawns	0
 			
 			StartWaveOutput
 			{
@@ -2118,26 +2148,6 @@ population
 				{
 					Template	T_TFGateBot_Soldier_Extended_Concheror_Normal_Crit
 				}
-			}
-		}
-		
-		WaveSpawn
-		{
-			Name	"w6_soldier"
-			WaitForAllSpawned	"w6_giantdemo"
-			TotalCurrency	50
-			TotalCount	20
-			MaxActive	10
-			SpawnCount	1
-			Where	spawnbot
-			WaitBeforeStarting	1
-			WaitBetweenSpawns	1
-			Support	1
-			
-			TFBot
-			{
-				Class	Soldier
-				Skill	Expert
 			}
 		}
 	}
